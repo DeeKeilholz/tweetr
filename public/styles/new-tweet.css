@@ -1,0 +1,33 @@
+.new-tweet {
+  margin: auto;
+  background-color: #eee;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  vertical-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+textarea {
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+}
+
+h2 {
+   border-bottom: 1px solid #726F6F;
+}
+
+input {
+  display:block;
+  background: linear-gradient(to bottom right, #c0c0c0, #eee)
+}
+
+.new-tweet span.counter {
+  position: relative;
+  bottom: 20px;
+  float: right;
+  font-size: 80%;
+  }
+}
