@@ -28,6 +28,10 @@ html {
    margin: auto;
    padding-top: 140px;
  }
+
+ .change {
+          color: #ff0000;
+         }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
