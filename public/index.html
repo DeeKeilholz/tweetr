@@ -14,6 +14,9 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <!-- Awesome Font  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
@@ -22,15 +25,6 @@
 
     <!-- Tweet style CSS -->
     <link rel="stylesheet" href="/styles/tweets-style.css" type="text/css" />
-
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
-    <!-- Counter JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 
   </head>
@@ -47,7 +41,7 @@
     <main class="container">
       <section class="new-tweet">
 
-        <h2>Compose Tweet</h2>
+        <h2 id="form-headline">Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <textarea id="textarea" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
@@ -56,27 +50,50 @@
 
       </section>
 
-      <section class="all-tweets">
+      <section id="all-tweets">
 
         <article>
 
-          <header>
-            <img scr="/images/bird.png">
-            <h1>Billy<h1/>
-            <p>@Billy</p>
-          </header>
-          <body>
-          <p> This is Billy's awesome tweet.</p>
-          </body>
-          <footer>
-            <p>10 days ago</p>
-          </footer>
+            <header>
+              <div id="header-content">
+                <div id ="image-avatar"><img class="avatar" src="/images/avatar.jpg"></div>
+                <div id ="username"><h2>GrumpyCat</h2></div>
+                <div id ="handle"><h5>@GrumpyCat</h5></div>
+              </div>
+            </header>
+
+              <div class="message"> So many reasons to be grumpy. So little time. </div>
+
+            <footer>
+              <p>2 days ago</p>
+
+               <div class="footer-icons">
+
+                 <span class="icons-rows">
+                   <i class="fa fa-flag fa-lg"></i>
+                   <i class="fa fa-coffee fa-lg"></i>
+                   <i class="fa fa-heart fa-lg"></i>
+                 </span>
+
+               </div>
+
+            </footer>
 
         </article>
 
       </section>
 
     </main>
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 
   </body>
 

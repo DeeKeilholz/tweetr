@@ -1,44 +1,85 @@
-.all-tweets {
-  border-style: solid;
+#all-tweets {
+  margin-top: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
+  border-radius: 5px;
+  border: solid;
   border-width: 1px;
   border-color: #808080;
-  border-radius: 5px;
-  margin: auto;
-  text-align: left;
-  width: 400px;
-  vertical-align: center;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin-top: 2em;
 }
+
+
 
 header {
   background-color: #eee;
+  height: 70px;
   border-radius: 5px;
 
 }
-body {
-  padding: 5px 5px 5px 5px;
-  width: 100%;
+
+
+header #header-content {
+  position:relative;
+  height:70px;
 }
 
-.tweets img {
+header #image-avatar .avatar {
+  width:55px;
+  height:55px;
+  position:absolute;
+  top:7px;
+  left:7px;
+  border-radius:5px;
+}
+
+header #username h2 {
+  width:60px;
+  height:60px;
+  position:absolute;
+  top: -15px;
+  left:70px;
+
+}
+
+header #handle h5 {
+  width:60px;
+  height:60px;
+  position:absolute;
+  top:-10px;
+  left:305px;
+
+}
+
+.message {
+  padding: 40px 10px 40px 10px;
+
+}
+
+footer {
+  height: 40px;
+  border-top: solid;
+  border-color: #eee;
+  border-width: 2px;
+}
+
+footer p {
+ margin: 10px 5px 5px 5px;
+
+}
+
+footer .footer-icons {
   float: left;
+  margin: -22px 0px 0px 300px;
+  opacity: 0;
+  transition: 0s
 }
 
-.tweets h1 {
+footer .footer-icons:hover {
+    opacity: 1.0;
+    transition-delay:0.2s;
 
 }
-/*
-input {
-  display:block;
-  background: linear-gradient(to bottom right, #c0c0c0, #eee)
-}
 
-.all-tweets span.counter {
-  position: relative;
-  bottom: 20px;
-  float: right;
-  font-size: 80%;
-  }
-}*/
+footer .footer-icons .icons-rows {
+  color: #21B6A8
+}
