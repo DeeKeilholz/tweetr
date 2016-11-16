@@ -1,8 +1,8 @@
 #all-tweets {
-  margin-top: 2em;
-  margin-right: 2em;
-  margin-left: 2em;
-  border-radius: 5px;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  border-radius: 0.5em;
   border: solid;
   border-width: 1px;
   border-color: #808080;
@@ -12,48 +12,41 @@
 
 header {
   background-color: #eee;
-  height: 70px;
-  border-radius: 5px;
-
+  height: 6em;
+  border-radius: 0.5em;
 }
-
 
 header #header-content {
-  position:relative;
-  height:70px;
+  height: 6em;
 }
 
-header #image-avatar .avatar {
-  width:55px;
-  height:55px;
-  position:absolute;
-  top:7px;
-  left:7px;
-  border-radius:5px;
+header .avatarclass {
+  width: 5em;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 0.5em;
+  float: left;
 }
 
-header #username h2 {
-  width:60px;
-  height:60px;
-  position:absolute;
-  top: -15px;
-  left:70px;
-
+header .username {
+  float:left;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
 }
 
-header #handle h5 {
-  width:60px;
-  height:60px;
-  position:absolute;
-  top:-10px;
-  left:305px;
-
+/*.handle h5 means: any descendant of .handle \| h5.handle is fine*/
+header .handle {
+  float: right;
+  margin-right: 1em;
 }
+
+
 
 .message {
-  padding: 40px 10px 40px 10px;
-
+  padding: 3em 1em 3em 1em;
 }
+
+
 
 footer {
   height: 40px;
@@ -63,21 +56,21 @@ footer {
 }
 
 footer p {
- margin: 10px 5px 5px 5px;
-
+ font-size: 80%;
+ margin: 1em 1em 1em 1em;
+ float: left;
 }
 
 footer .footer-icons {
-  float: left;
-  margin: -22px 0px 0px 300px;
+  float: right;
   opacity: 0;
-  transition: 0s
+  transition: 0s;
+  padding: 10px 10px 0px 0px;
 }
 
 footer .footer-icons:hover {
     opacity: 1.0;
     transition-delay:0.2s;
-
 }
 
 footer .footer-icons .icons-rows {
