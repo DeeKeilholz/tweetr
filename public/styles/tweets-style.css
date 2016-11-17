@@ -1,14 +1,15 @@
-#all-tweets {
-  margin-top: 1.5em;
-  margin-right: 1.5em;
-  margin-left: 1.5em;
-  border-radius: 0.5em;
+
+
+.tweets-article {
+  overflow: auto;
   border: solid;
   border-width: 1px;
   border-color: #808080;
+  border-radius: 0.5em;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
 }
-
-
 
 header {
   background-color: #eee;

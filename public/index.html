@@ -42,7 +42,7 @@
       <section class="new-tweet">
 
         <h2 id="form-headline">Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <form id="new-tweet-form" action="/tweets" method="POST">
           <textarea id="textarea" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
@@ -51,36 +51,6 @@
       </section>
 
       <section id="all-tweets">
-
-        <article>
-
-            <header>
-              <div class="header-content">
-                <img class="avatarclass" src="/images/avatar.jpg">
-                <h2 class="username">GrumpyCat</h2>
-                <h5 class="handle">@GrumpyCat</h5>
-              </div>
-            </header>
-
-              <div class="message"> So many reasons to be grumpy. So little time. </div>
-
-            <footer>
-              <p>2 days ago</p>
-
-               <div class="footer-icons">
-
-                 <span class="icons-rows">
-                   <i class="fa fa-flag fa-lg"></i>
-                   <i class="fa fa-coffee fa-lg"></i>
-                   <i class="fa fa-heart fa-lg"></i>
-                 </span>
-
-               </div>
-
-            </footer>
-
-        </article>
-
       </section>
 
     </main>
