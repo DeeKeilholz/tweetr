@@ -1,26 +1,14 @@
 "use strict";
 
-<<<<<<< HEAD
-const PORT        = 8080;
-const express     = require("express");
-const bodyParser  = require("body-parser");
-const app         = express();
-
-
-const tweetsApi  = require('./api/tweets');
-const db         = require('./lib/db');
-=======
-// Basic express setup:
-
 const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
->>>>>>> d453909373182723ff734be1bc22d7fa9ec86911
+const morgan = require('morgan');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
+app.use(morgan('dev'));
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
