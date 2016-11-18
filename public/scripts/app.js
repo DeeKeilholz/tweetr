@@ -76,17 +76,28 @@ $.ajax({
 loadTweets()
 
 
+
 const tweetSubmit = () => {
+  var form = $("#new-tweet-form");
   // process my form
-  $("new-tweet-form").submit(function(event) {
-    event.preventDefault();
-    // get the form data using form id
-    const textInput = $('#textarea').val();
+  form.submit(function(event) {
+      event.preventDefault();
+
+      const input = $('#textarea').val();
+        if (input === '' || null) {
+          $("#error").text("Got nothing to say? Tweet about it!");
+            return error;
+        };
+
+        if (input.length > 140) {
+          $("#error").text("Say more with less :)");
+            return error;
+        };
     //process the form with ajax
       $.ajax({
         method: 'POST', // defines the type of HTTP verb I want to use
         url: "/tweets", // the url where I want to post
-        data: $('new-tweet-form').serialize(), // my data object - serilize function acts on my
+        data: form.serialize(), // my data object - serilize function acts on my
         // object and creates a text string in standard URL-encoded notation
         success: (tweet) => {
           loadTweets();
@@ -95,7 +106,15 @@ const tweetSubmit = () => {
   });
 }
 
+
+
+
 tweetSubmit(); // calling my function
+
+$('#compose-button').on('click', function(evnt) {
+  $('#new-tweet').slideToggle();
+  $('#new-tweet textarea').focus();
+ });
 
 
 });
