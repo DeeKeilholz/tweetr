@@ -6,12 +6,15 @@ module.exports = function makeDataHelpers(db) {
   return {
 
     // Saves a tweet to `db`
-    saveTweet: function(newTweet, callback) {
-      simulateDelay(() => {
-        db.tweets.push(newTweet);
-        callback(null, true);
-      });
+    saveTweet: function (data, callback) {
+      db.collection("tweets").insertOne(data, function (err, result) {
+        if (err) {
+          console.log("Something is not working: ", err);
+        }
+        callback(err)
+      })
     },
+
 
 
 
@@ -21,11 +24,9 @@ module.exports = function makeDataHelpers(db) {
       var records = db.collection("tweets")
       records.find().toArray(function(err, results) {
       console.log("Found the following records:", results);
-      callback(results.sort(function (a, b) {
-      return a.created_at - b.created_at;
-      }));
-      });
-   };
+      callback(err, results)
+      })
+   }
 
 
  };

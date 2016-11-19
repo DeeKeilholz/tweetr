@@ -21,6 +21,8 @@ const renderTweets = (tweet) => {
 
 
 const createTweetElement = (tweetobj) => {
+  const daysDecimals = ((tweetobj.created_at) / (1000 * 60 * 60 * 24)) % 7;
+  const days = Math.floor(daysDecimals - 1);
   const html_data =
     `<article class="tweets-article">
        <header>
@@ -34,7 +36,7 @@ const createTweetElement = (tweetobj) => {
         <div class="message">${tweetobj.content.text}</div>
 
       <footer>
-        <p>${tweetobj.created_at} days ago</p>
+        <p>${days} days ago</p>
 
          <div class="footer-icons">
 

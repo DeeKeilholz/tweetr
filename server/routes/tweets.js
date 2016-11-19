@@ -12,7 +12,8 @@ module.exports = function(DataHelpers) {
 //get route retrieves tweets
   tweetsRoutes.get("/", function(req, res) {
     //route handler for tweetsRoutes.get calls DataHelpers.getTweets()
-    DataHelpers.getTweets((err, tweets) => {
+    DataHelpers.getTweets(function (err, tweets) {
+
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
@@ -37,7 +38,7 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 //route handler for tweetsRoutes.post("/", ...) calls DataHelpwers.saveTweet()
-    DataHelpers.saveTweet(tweet, (err) => {
+    DataHelpers.saveTweet(tweet, function (err) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
