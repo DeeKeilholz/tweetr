@@ -6,5 +6,5 @@ const db = {
   tweets: require("../data-files/initial-tweets")
 }
 
+// exports a function require ()
 module.exports = db;
-
