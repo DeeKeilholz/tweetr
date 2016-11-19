@@ -1,3 +1,5 @@
+"use strict";
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -21,6 +23,7 @@ const renderTweets = (tweet) => {
 
 
 const createTweetElement = (tweetobj) => {
+  // converts Unix timestamp to decimal days
   const daysDecimals = ((tweetobj.created_at) / (1000 * 60 * 60 * 24)) % 7;
   const days = Math.floor(daysDecimals - 1);
   const html_data =
@@ -78,22 +81,21 @@ $.ajax({
 loadTweets()
 
 
-
 const tweetSubmit = () => {
   var form = $("#new-tweet-form");
-  // process my form
+  // process my submit form
   form.submit(function(event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      const input = $('#textarea').val();
-        if (input === '' || null) {
-          $("#error").text("Got nothing to say? Tweet about it!");
-            return error;
+    const input = $('#textarea').val();
+      if (input === '' || null) {
+        $("#error").text("Got nothing to say? Tweet about it!");
+        return error;
         };
 
-        if (input.length > 140) {
-          $("#error").text("Say more with less :)");
-            return error;
+      if (input.length > 140) {
+        $("#error").text("Say more with less :)");
+        return error;
         };
     //process the form with ajax
       $.ajax({
@@ -105,18 +107,17 @@ const tweetSubmit = () => {
           loadTweets();
         }
       })
-  });
+  })
 }
 
+tweetSubmit() // calling my function
 
-
-
-tweetSubmit(); // calling my function
-
-$('#compose-button').on('click', function(evnt) {
+//toggles my tweet compose form and focuses on form textarea when
+//button is clicked
+$('#compose-button').on('click', function(event) {
   $('#new-tweet').slideToggle();
   $('#new-tweet textarea').focus();
- });
+})
 
 
-});
+})

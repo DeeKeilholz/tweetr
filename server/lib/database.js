@@ -9,8 +9,6 @@ module.exports = function setUpDatabase(callback) {
       throw err;
     }
     callback(db)
-    
-
-  });
+  })
 
 }
