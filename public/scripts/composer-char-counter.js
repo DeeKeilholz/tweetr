@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
 
- $('#textarea').keypress(updateCounter);
+ $('#textarea').keyup(updateCounter);
 //updates my counter each time a key is pressed
  function updateCounter() {
    const maxLength = 140;
