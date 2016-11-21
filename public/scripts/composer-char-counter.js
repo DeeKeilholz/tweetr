@@ -18,4 +18,5 @@ $(document).ready(function() {
      }
    }
 
+   if (trim($(this).val()) == '') {}
 })

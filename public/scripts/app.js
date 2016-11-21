@@ -88,7 +88,7 @@ const tweetSubmit = () => {
     event.preventDefault();
 
     const input = $('#textarea').val();
-      if (input === '' || null) {
+      if (input.trim() === '' || null) {
         $("#error").text("Got nothing to say? Tweet about it!");
         return error;
         };
@@ -97,6 +97,8 @@ const tweetSubmit = () => {
         $("#error").text("Say more with less :)");
         return error;
         };
+
+
     //process the form with ajax
       $.ajax({
         method: 'POST', // defines the type of HTTP verb I want to use
