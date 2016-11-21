@@ -7,16 +7,15 @@ $(document).ready(function() {
 //updates my counter each time a key is pressed
  function updateCounter() {
    const maxLength = 140;
-   const inputText = $(this).val().length;
-   const charRemain = maxLength - inputText;
+   const inputText = $(this).val().trim()
+   const inputTextLength = inputText.length;
+   const charRemain = maxLength - inputTextLength;
    $('span.counter').text(charRemain);
 
    if (charRemain < 0){
      $('span.counter').addClass("change");
-     } else {
-       $('span.counter').removeClass("change");
-     }
+   } else {
+     $('span.counter').removeClass("change");
    }
-
-   if (trim($(this).val()) == '') {}
-})
+  }
+});
